@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biodata - Sultan Tsaqib</title>
+
+  <!-- AOS CSS (animasi) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --abu-muda: #6b6969;
+      --abu-tua: #333333;
+      --putih: #ffffff;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: var(--abu-muda);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--abu-tua);
+    }
+
+    .card {
+      flex-grow: 1;
+      margin: 40px auto 20px auto;
+      padding: 30px;
+      background-color: var(--putih);
+      color: var(--abu-tua);
+      max-width: 800px;
+      width: 90%;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--abu-tua);
+      object-fit: cover;
+    }
+
+    .nama {
+      font-size: 26px;
+      font-weight: bold;
+      color: var(--abu-tua);
+    }
+
+    .biodata-button {
+      display: block;
+      width: 100%;
+      background-color: var(--abu-tua);
+      color: var(--putih);
+      border: none;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: left;
+      transition: background-color 0.3s;
+    }
+
+    .biodata-button:hover {
+      background-color: #555;
+    }
+
+    .biodata-content {
+      display: none;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      background-color: #f4f2f2;
+      color: #000;
+      border-left: 4px solid #666;
+      border-radius: 6px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .flag {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .flag img {
+      width: 28px;
+      height: 20px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .btn-cv {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: var(--abu-tua);
+      color: var(--putih);
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-cv:hover {
+      background-color: #555;
+      transform: scale(1.05);
+    }
+
+    footer {
+      padding: 20px 0;
+      text-align: center;
+      font-size: 14px;
+      background-color: #f8f4f4;
+      color: #333;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      .profile-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nama {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Kartu Biodata -->
+  <div class="card" data-aos="fade-up">
+
+    <!-- Header: Foto + Nama -->
+    <div class="profile-header" data-aos="fade-down">
+      <img src="pp/foto profil.jpg" alt="Foto Profil" class="profile-img">
+      <div class="nama">Sultan Tsaqib Tsary Abdullah</div>
+    </div>
+
+    <!-- Biodata Interaktif -->
+    <button class="biodata-button" onclick="toggleContent(this)">Tempat, Tanggal Lahir</button>
+    <div class="biodata-content">Cilacap, 18 Agustus 2006</div>
+
+    <button class="biodata-button" onclick="toggleContent(this)">Jenis Kelamin</button>
+    <div class="biodata-content">Laki-laki</div>
+
+    <button class="biodata-button" onclick="toggleContent(this)">Alamat</button>
+    <div class="biodata-content">Perum Central Park Cikarang, Jl. Anggrek 3</div>
+
+    <button class="biodata-button" onclick="toggleContent(this)">Email</button>
+    <div class="biodata-content">sultantsaqib18@gmail.com</div>
+
+    <button class="biodata-button" onclick="toggleContent(this)">Telepon</button>
+    <div class="biodata-content">0896-6278-9106</div>
+
+    <button class="biodata-button" onclick="toggleContent(this)">Agama</button>
+    <div class="biodata-content">Islam</div>
+
+    <button class="biodata-button" onclick="toggleContent(this)">Pendidikan</button>
+    <div class="biodata-content">S1 Informatika - Institut Teknologi Sains Bandung</div>
+
+    <button class="biodata-button" onclick="toggleContent(this)">Prestasi</button>
+    <div class="biodata-content">Juara 1 Rawr tingkat Provinsi</div>
+
+    <button class="biodata-button" onclick="toggleContent(this)">Kebangsaan</button>
+    <div class="biodata-content">
+      <div class="flag">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg" alt="Bendera Indonesia">
+        <span><strong>Indonesia</strong></span>
+      </div>
+    </div>
+
+    <!-- Tombol Download CV -->
+    <a class="btn-cv" href="https://drive.google.com/your_cv_link" target="_blank" data-aos="fade-up">Download CV</a>
+  </div>
+
+  <!-- Footer Paling Bawah -->
+  <footer data-aos="fade-up" data-aos-delay="300">
+    &copy; 2025 Sultan Tsaqib. Semua Hak Dilindungi.
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    function toggleContent(button) {
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
